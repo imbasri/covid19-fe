@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+   .bg-linier {
+      @apply bg-gradient-to-r from-[#FFF8F8]  to-[#B57474]/20;
+   }
+}
