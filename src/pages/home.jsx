@@ -11,6 +11,7 @@ import ctg_air from "../assets/img/ctg_air.png";
 import ctg_hand from "../assets/img/ctg_hand.png";
 import ctg_objek from "../assets/img/ctg_objek.png";
 import symtopmps from "../assets/img/hero_symtomps.png";
+import Guide from "../components/Guide";
 function Home() {
    const navigate = useNavigate();
 
@@ -160,6 +161,28 @@ function Home() {
             </div>
          </section>
          {/* symtomps end */}
+
+         {/* We Do Start */}
+         <section className="mx-auto md:container">
+            <div className="text-center">
+               <h2 className="pb-3 font-hat text-lg font-extrabold text-primary">
+                  Covid-19
+               </h2>
+               <span className="block pb-2 font-hat text-lg font-bold text-secondary lg:text-4xl">
+                  What should we do
+               </span>
+               <p className="md:max-w-10 mx-auto px-3 pb-10 text-base text-slate-500 md:w-[500px]">
+                  Corona viruses are a type of virus. There are many different
+                  kinds, and some cause disease. A newly identified type has
+                  caused.
+               </p>
+            </div>
+            <div className="w-full">
+               <Guide />
+            </div>
+         </section>
+
+         {/* We Do End */}
       </>
    );
 }
