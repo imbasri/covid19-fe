@@ -3,6 +3,9 @@ module.exports = {
    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
    theme: {
       extend: {
+         backgroundImage: {
+            conta: "./src/assets/img/icon_covid.png",
+         },
          colors: {
             primary: "#FF383D",
             secondary: "#035755",

@@ -4,8 +4,32 @@ import heroimg from "../assets/img/hero_img.png";
 import aboutimg from "../assets/img/icon_about.png";
 import bgIcon from "../assets/img/icon_covid.png";
 import { useNavigate } from "react-router-dom";
+import Card from "../components/Card";
+
+// assets
+import ctg_air from "../assets/img/ctg_air.png";
+import ctg_hand from "../assets/img/ctg_hand.png";
+import ctg_objek from "../assets/img/ctg_objek.png";
 function Home() {
    const navigate = useNavigate();
+
+   const cardContent = [
+      {
+         src: ctg_air,
+         header: "Air Transmission",
+         text: "Objectively evolve tactical expertise before extensible initiatives. Efficiently simplify",
+      },
+      {
+         src: ctg_hand,
+         header: "Human Contacts",
+         text: "Washing your hands is one of thesimplest ways you can protect",
+      },
+      {
+         src: ctg_objek,
+         header: "Containted Objects",
+         text: "Use the tissue while sneezing,In this way, you can protect your droplets.",
+      },
+   ];
    return (
       <>
          {/* Hero Start */}
@@ -84,7 +108,22 @@ function Home() {
          </section>
          {/* what covid End */}
          {/* contagion start */}
-
+         <section className="mx-auto my-10 w-full bg-hero-pattern bg-no-repeat text-center">
+            <div className=" mx-auto mb-6 flex w-full flex-col items-center justify-center md:container md:flex-row md:gap-5 md:bg-hero-pattern md:px-2">
+               {/* map */}
+               {cardContent &&
+                  cardContent.map((card, index) => {
+                     return (
+                        <Card
+                           key={index}
+                           src={card.src}
+                           header={card.header}
+                           text={card.text}
+                        />
+                     );
+                  })}
+            </div>
+         </section>
          {/* contagion end */}
       </>
    );
