@@ -1,15 +1,16 @@
 import React from "react";
 import Button from "../elements/Button";
-import heroimg from "../assets/img/hero_img.png";
-import aboutimg from "../assets/img/icon_about.png";
-import bgIcon from "../assets/img/icon_covid.png";
 import { useNavigate } from "react-router-dom";
 import Card from "../components/Card";
 
 // assets
+import aboutimg from "../assets/img/icon_about.png";
+import bgIcon from "../assets/img/icon_covid.png";
+import heroimg from "../assets/img/hero_img.png";
 import ctg_air from "../assets/img/ctg_air.png";
 import ctg_hand from "../assets/img/ctg_hand.png";
 import ctg_objek from "../assets/img/ctg_objek.png";
+import symtopmps from "../assets/img/hero_symtomps.png";
 function Home() {
    const navigate = useNavigate();
 
@@ -33,7 +34,7 @@ function Home() {
    return (
       <>
          {/* Hero Start */}
-         <section className=" bg-linier m-auto ">
+         <section className="bg-linier m-auto ">
             <div className="mt-16 w-full justify-between py-1 lg:flex">
                <div
                   id="hero-left"
@@ -84,7 +85,7 @@ function Home() {
                   <span className="block pb-2 font-hat text-lg font-bold text-secondary lg:text-4xl">
                      Coronavirus
                   </span>
-                  <p className="break-words text-start font-hat text-xs text-slate-700 sm:max-w-xl sm:text-base lg:text-lg">
+                  <p className="break-words text-start font-hat text-xs text-slate-500 sm:max-w-xl sm:text-base lg:text-lg">
                      Corona viruses are a type of virus. There are many
                      different kinds, and some cause disease. A newly identified
                      type has caused a recent outbreak of respiratory illness
@@ -108,8 +109,18 @@ function Home() {
          </section>
          {/* what covid End */}
          {/* contagion start */}
-         <section className="mx-auto my-10 w-full bg-hero-pattern bg-no-repeat text-center">
-            <div className=" mx-auto mb-6 flex w-full flex-col items-center justify-center md:container md:flex-row md:gap-5 md:bg-hero-pattern md:px-2">
+         <section className="bg-hero-pattern mx-auto my-10 w-full bg-no-repeat text-center">
+            <h2 className="pb-3 font-hat text-lg font-extrabold text-primary">
+               Covid-19
+            </h2>
+            <span className="block pb-2 font-hat text-lg font-bold text-secondary lg:text-4xl">
+               Contagion
+            </span>
+            <p className="md:max-w-10 mx-auto px-3 pb-10 text-base text-slate-500 md:w-[500px]">
+               Corona viruses are a type of virus. There are many different
+               kinds, and some cause disease. A newly identified type.
+            </p>
+            <div className=" md:bg-hero-pattern mx-auto mb-6 flex w-full flex-col items-center justify-center md:container md:flex-row md:gap-5 md:px-2">
                {/* map */}
                {cardContent &&
                   cardContent.map((card, index) => {
@@ -125,6 +136,30 @@ function Home() {
             </div>
          </section>
          {/* contagion end */}
+         {/* symtomps start */}
+         <section className="mx-auto mb-10 w-full md:container">
+            <div className="w-full text-center">
+               <h2 className="pb-3 font-hat text-lg font-extrabold text-primary">
+                  Covid-19
+               </h2>
+               <span className="block pb-2 font-hat text-lg font-bold text-secondary lg:text-4xl">
+                  Symptomps
+               </span>
+               <p className="md:max-w-10 mx-auto px-3 pb-10 text-base text-slate-500 md:w-[500px] lg:w-[700px]">
+                  Corona viruses are a type of virus. There are many different
+                  kinds, and some cause disease. A newly identified type has
+                  caused a recent outbreak of respiratory
+               </p>
+               <div className="mx-auto w-full overflow-hidden">
+                  <img
+                     src={symtopmps}
+                     alt="symtopmps"
+                     className="mx-auto h-auto w-full scale-[1.3] object-contain transition-all duration-300 sm:scale-100 "
+                  />
+               </div>
+            </div>
+         </section>
+         {/* symtomps end */}
       </>
    );
 }
