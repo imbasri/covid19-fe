@@ -12,6 +12,12 @@ import ctg_hand from "../assets/img/ctg_hand.png";
 import ctg_objek from "../assets/img/ctg_objek.png";
 import symtopmps from "../assets/img/hero_symtomps.png";
 import Guide from "../components/Guide";
+
+import hero_mask from "../assets/img/hero_mask.png";
+import hero_hands from "../assets/img/hero_hands.png";
+import hero_rag from "../assets/img/hero_rag.png";
+import hero_contact from "../assets/img/hero_contact.png";
+import virus from "../assets/img/bg-virus.png";
 function Home() {
    const navigate = useNavigate();
 
@@ -32,6 +38,33 @@ function Home() {
          text: "Use the tissue while sneezing,In this way, you can protect your droplets.",
       },
    ];
+   const guideContent = [
+      {
+         id: 1,
+         src: hero_mask,
+         judul: "wear masks",
+         detail: `Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively `,
+      },
+      {
+         id: 2,
+         src: hero_hands,
+         judul: "Wash Your Hands",
+         detail: `Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively Continually seize impactful vortals `,
+      },
+      {
+         id: 3,
+         src: hero_rag,
+         judul: "Use nose -  rag",
+         detail: `Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively `,
+      },
+      {
+         id: 4,
+         src: hero_contact,
+         judul: "Avoid contacts",
+         detail: `Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic`,
+      },
+   ];
+
    return (
       <>
          {/* Hero Start */}
@@ -177,11 +210,21 @@ function Home() {
                   caused.
                </p>
             </div>
-            <div className="w-full">
-               <Guide />
+            <div className="bg-virus w-full">
+               {guideContent &&
+                  guideContent.map((guide) => {
+                     return (
+                        <Guide
+                           key={guide.id}
+                           id={guide.id}
+                           src={guide.src}
+                           judul={guide.judul}
+                           detail={guide.detail}
+                        />
+                     );
+                  })}
             </div>
          </section>
-
          {/* We Do End */}
       </>
    );

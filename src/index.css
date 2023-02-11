@@ -6,4 +6,10 @@
    .bg-linier {
       @apply bg-gradient-to-r from-[#FFF8F8]  to-[#B57474]/20;
    }
+   .bg-virus {
+      background-image: url("./assets/img/bg-virus.png");
+      background-repeat: no-repeat;
+      background-origin: content-box;
+      background-size: contain;
+   }
 }
