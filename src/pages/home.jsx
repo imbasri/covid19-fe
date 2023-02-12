@@ -17,7 +17,7 @@ import hero_mask from "../assets/img/hero_mask.png";
 import hero_hands from "../assets/img/hero_hands.png";
 import hero_rag from "../assets/img/hero_rag.png";
 import hero_contact from "../assets/img/hero_contact.png";
-import virus from "../assets/img/bg-virus.png";
+import Footer from "../components/Footer";
 function Home() {
    const navigate = useNavigate();
 
@@ -226,6 +226,8 @@ function Home() {
             </div>
          </section>
          {/* We Do End */}
+         {/* Footer */}
+         <Footer />
       </>
    );
 }
